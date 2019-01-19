@@ -5,7 +5,8 @@
 
 - chapter21
     - spring boot, contact demo
-        - dependencies: jdbc, thymeleaf, web, h2
+        - tool: intellij-idea
+        - dependencies: spring-boot-starter-jdbc, spring-boot-starter-thymeleaf, spring-boot-starter-web, h2
         - build: maven
         - package: war
         
@@ -111,7 +112,7 @@ public class Application extends SpringBootServletInitializer {
 }
 ```
 
-home.html
+resources/templates/home.html
 ```html
 <!DOCTYPE html>
 <head xmlns:th="http://www.thymeleaf.org">
@@ -144,7 +145,21 @@ home.html
 </html>
 ```
 
-schema.sql
+resources/public/style.css
+```css
+body {
+    background: #eeeeee;
+    font-family: sans-serif;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+```
+
+resources/schema.sql
 ```sql
 create table contacts (
   id identity,
